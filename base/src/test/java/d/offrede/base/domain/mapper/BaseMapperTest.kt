@@ -8,7 +8,7 @@ class BaseMapperTest {
 
     @Test
     fun `test base mapper implementation for int to string`() {
-        assertEquals(TestBaseMapper.transform(1), "1")
+        assertEquals("1", TestBaseMapper.transform(1))
     }
 
 }
