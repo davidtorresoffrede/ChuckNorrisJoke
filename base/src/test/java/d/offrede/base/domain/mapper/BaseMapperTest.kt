@@ -13,6 +13,6 @@ class BaseMapperTest {
 
 }
 
-object TestBaseMapper : BaseMapper<Int, String>() {
+private object TestBaseMapper : BaseMapper<Int, String>() {
     override fun transform(source: Int) = source.toString()
 }
