@@ -1,7 +1,6 @@
 package d.offrede.base.domain.usecase
 
 import org.junit.Test
-import org.junit.Assert.assertTrue
 import org.junit.Assert.assertEquals
 
 class BaseResultTest {
