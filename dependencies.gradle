@@ -1,0 +1,21 @@
+ext {
+    android     = [
+            material            : "com.google.android.material:material:1.3.0"
+    ]
+
+    androidx    = [
+            core                : "androidx.core:core-ktx:1.3.2",
+            appcompat           : "androidx.appcompat:appcompat:1.2.0",
+            constraintlayout    : "androidx.constraintlayout:constraintlayout:2.0.4"
+    ]
+
+    kotlin      = [
+            base                : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    ]
+
+    androidTest = [
+            espresso_core       : "androidx.test.espresso:espresso-core:3.3.0"
+    ]
+
+    junit       = "junit:junit:4.12"
+}
