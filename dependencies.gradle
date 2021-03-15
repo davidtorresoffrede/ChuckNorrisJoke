@@ -40,11 +40,13 @@ ext {
             coroutines          : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
     ]
 
-    junit       = "junit:junit:4.12"
+    junit           = "junit:junit:4.12"
 
-    mockito = "org.mockito:mockito-core:2.28.2"
+    mockito         = "org.mockito:mockito-core:2.28.2"
 
-    mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    mockito_kotlin  = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
 
-    mockk = "io.mockk:mockk:1.10.6"
+    mockk           = "io.mockk:mockk:1.10.6"
+
+    glide           = "com.github.bumptech.glide:glide:4.10.0"
 }
