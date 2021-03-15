@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Toolbar  -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BaseToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="elevation">@dimen/toolbar_elevation</item>
+    </style>
+
+    <!--  Empty Container  -->
+    <style name="EmptyContainer">
+        <item name="android:paddingTop">@dimen/empty_container_padding_top</item>
+        <item name="android:paddingLeft">@dimen/empty_container_padding_left</item>
+        <item name="android:paddingStart">@dimen/empty_container_padding_left</item>
+        <item name="android:paddingRight">@dimen/empty_container_padding_right</item>
+        <item name="android:paddingEnd">@dimen/empty_container_padding_right</item>
+        <item name="android:paddingBottom">@dimen/empty_container_padding_bottom</item>
+    </style>
+
+    <style name="EmptyImage">
+        <item name="android:layout_width">@dimen/empty_image_width</item>
+        <item name="android:layout_height">@dimen/empty_image_height</item>
+        <item name="android:src">@drawable/ic_empty</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:tint">@color/empty_image_tint</item>
+    </style>
+
+    <style name="EmptyText">
+        <item name="android:layout_marginTop">@dimen/empty_text_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/empty_text_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/empty_text_margin_left</item>
+        <item name="android:layout_marginBottom">@dimen/empty_text_margin_bottom</item>
+        <item name="android:layout_marginRight">@dimen/empty_text_margin_right</item>
+        <item name="android:layout_marginEnd">@dimen/empty_text_margin_right</item>
+        <item name="android:textColor">@color/empty_text</item>
+        <item name="android:textSize">@dimen/empty_text_text_size</item>
+    </style>
+
+    <!--  Failure Container  -->
+    <style name="FailureContainer">
+        <item name="android:paddingTop">@dimen/failure_container_padding_top</item>
+        <item name="android:paddingLeft">@dimen/failure_container_padding_left</item>
+        <item name="android:paddingStart">@dimen/failure_container_padding_left</item>
+        <item name="android:paddingRight">@dimen/failure_container_padding_right</item>
+        <item name="android:paddingEnd">@dimen/failure_container_padding_right</item>
+        <item name="android:paddingBottom">@dimen/failure_container_padding_bottom</item>
+    </style>
+
+    <style name="FailureImage">
+        <item name="android:layout_width">@dimen/failure_image_width</item>
+        <item name="android:layout_height">@dimen/failure_image_height</item>
+        <item name="android:src">@drawable/ic_failure</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:tint">@color/failure_image_tint</item>
+    </style>
+
+    <style name="FailureText">
+        <item name="android:layout_marginTop">@dimen/failure_text_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/failure_text_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/failure_text_margin_left</item>
+        <item name="android:layout_marginBottom">@dimen/failure_text_margin_bottom</item>
+        <item name="android:layout_marginRight">@dimen/failure_text_margin_right</item>
+        <item name="android:layout_marginEnd">@dimen/failure_text_margin_right</item>
+        <item name="android:textColor">@color/failure_text</item>
+        <item name="android:textSize">@dimen/failure_text_text_size</item>
+    </style>
+
+    <!--  Loading Container  -->
+    <style name="LoadingContainer">
+        <item name="android:paddingTop">@dimen/loading_container_padding_top</item>
+        <item name="android:paddingLeft">@dimen/loading_container_padding_left</item>
+        <item name="android:paddingStart">@dimen/loading_container_padding_left</item>
+        <item name="android:paddingRight">@dimen/loading_container_padding_right</item>
+        <item name="android:paddingEnd">@dimen/loading_container_padding_right</item>
+        <item name="android:paddingBottom">@dimen/loading_container_padding_bottom</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@color/loading_container_background</item>
+    </style>
+
+    <style name="LoadingProgress" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:layout_width">@dimen/loading_progress_width</item>
+        <item name="android:layout_height">@dimen/loading_progress_height</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:tint">@color/loading_progress_tint</item>
+    </style>
+
+    <style name="LoadingText">
+        <item name="android:layout_marginTop">@dimen/loading_text_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/loading_text_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/loading_text_margin_left</item>
+        <item name="android:layout_marginBottom">@dimen/loading_text_margin_bottom</item>
+        <item name="android:layout_marginRight">@dimen/loading_text_margin_right</item>
+        <item name="android:layout_marginEnd">@dimen/loading_text_margin_right</item>
+        <item name="android:textColor">@color/loading_text</item>
+        <item name="android:textSize">@dimen/loading_text_text_size</item>
+    </style>
+
+</resources>
