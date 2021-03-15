@@ -26,6 +26,20 @@ ext {
             runner              : "androidx.test:runner:1.1.0"
     ]
 
+    koin        = [
+            core                : "org.koin:koin-core:2.1.6",
+            android             : "org.koin:koin-android:2.1.6",
+            viewmodel           : "org.koin:koin-android-viewmodel:2.1.6",
+            test                : "org.koin:koin-test:2.1.6"
+    ]
+
+    retrofit2   = [
+            interceptor         : "com.squareup.okhttp3:logging-interceptor:4.9.0",
+            retrofit2           : "com.squareup.retrofit2:retrofit:2.9.0",
+            gson                : "com.squareup.retrofit2:converter-gson:2.9.0",
+            coroutines          : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+    ]
+
     junit       = "junit:junit:4.12"
 
     mockito = "org.mockito:mockito-core:2.28.2"

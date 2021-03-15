@@ -40,12 +40,12 @@ android {
 }
 
 dependencies {
-    implementation  kotlin.base
-    implementation  kotlin.coroutines_core
-    implementation  androidx.core
-    implementation  androidx.appcompat
-    implementation  androidx.constraintlayout
-    implementation  android.material
+    implementation kotlin.base
+    implementation kotlin.coroutines_core
+    implementation androidx.core
+    implementation androidx.appcompat
+    implementation androidx.constraintlayout
+    implementation android.material
 
     testImplementation junit
     testImplementation mockk

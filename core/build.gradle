@@ -40,16 +40,24 @@ android {
 }
 
 dependencies {
-    implementation  kotlin.base
-    implementation  kotlin.coroutines_core
-    implementation  androidx.core
-    implementation  androidx.appcompat
-    implementation  androidx.constraintlayout
-    implementation  android.material
+    implementation kotlin.base
+    implementation kotlin.coroutines_core
+    implementation androidx.core
+    implementation androidx.appcompat
+    implementation androidx.constraintlayout
+    implementation android.material
+    implementation koin.core
+    implementation koin.android
+    implementation koin.viewmodel
+    implementation retrofit2.interceptor
+    implementation retrofit2.retrofit2
+    implementation retrofit2.gson
+    implementation retrofit2.coroutines
 
     testImplementation junit
     testImplementation mockk
     testImplementation mockito_kotlin
     testImplementation androidx.core_testing
     testImplementation kotlin.coroutines_test
+    testImplementation koin.test
 }
