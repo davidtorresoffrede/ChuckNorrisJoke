@@ -28,5 +28,9 @@ ext {
 
     junit       = "junit:junit:4.12"
 
+    mockito = "org.mockito:mockito-core:2.28.2"
+
+    mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+
     mockk = "io.mockk:mockk:1.10.6"
 }

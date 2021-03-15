@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 apply from: rootProject.projectDir.absolutePath + "/dependencies.gradle"
@@ -32,10 +34,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation  kotlin.base
+    implementation  kotlin.coroutines_core
     implementation  androidx.core
     implementation  androidx.appcompat
     implementation  androidx.constraintlayout
@@ -43,6 +49,7 @@ dependencies {
 
     testImplementation junit
     testImplementation mockk
-//    testImplementation androidx.core_testing
+    testImplementation mockito_kotlin
+    testImplementation androidx.core_testing
     testImplementation kotlin.coroutines_test
 }
