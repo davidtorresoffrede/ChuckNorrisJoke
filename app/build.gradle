@@ -42,5 +42,5 @@ dependencies {
     implementation  android.material
 
     testImplementation junit
-    androidTestImplementation androidTest.espresso_core
+    androidTestImplementation android_test.espresso_core
 }

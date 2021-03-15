@@ -11,12 +11,26 @@ ext {
     ]
 
     kotlin      = [
-            base                : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+            base                : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            coroutines_test     : "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3",
+            coroutines_core     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3",
+            coroutines_android  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
     ]
 
-    androidTest = [
-            espresso_core       : "androidx.test.espresso:espresso-core:3.3.0"
+    android_test = [
+            orchestrator        : "androidx.test:orchestrator:1.1.0",
+            rules               : "androidx.test:rules:1.1.0",
+            espresso_core       : "androidx.test.espresso:espresso-core:3.3.0",
+            espresso_intents    : "androidx.test.espresso:espresso-intents:3.3.0",
+            espresso_contrib    : "androidx.test.espresso:espresso-contrib:3.3.0",
+            runner              : "androidx.test:runner:1.1.0"
     ]
 
     junit       = "junit:junit:4.12"
+
+    mockito = "org.mockito:mockito-core:2.28.2"
+
+    mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+
+    mockk = "io.mockk:mockk:1.10.6"
 }

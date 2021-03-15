@@ -42,5 +42,7 @@ dependencies {
     implementation  android.material
 
     testImplementation junit
-    testImplementation androidx.core_testing
+    testImplementation mockk
+//    testImplementation androidx.core_testing
+    testImplementation kotlin.coroutines_test
 }

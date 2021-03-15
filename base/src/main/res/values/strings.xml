@@ -1,0 +1,4 @@
+<resources>
+    <string name="connection_failure_unexpected">Ocorreu um erro inesperado</string>
+    <string name="connection_failure_network">Houve uma falha de conexão, verifique sua internet e tente novamente</string>
+</resources>
