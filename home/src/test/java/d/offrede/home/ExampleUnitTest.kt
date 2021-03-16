@@ -1,4 +1,4 @@
-package d.offrede.chucknorris
+package d.offrede.home
 
 import org.junit.Test
 

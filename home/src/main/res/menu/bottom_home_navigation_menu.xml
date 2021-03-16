@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/random"
+        android:enabled="true"
+        android:icon="@android:drawable/arrow_up_float"
+        android:title="@string/home_menu_item_random"/>
+    <item
+        android:id="@+id/search"
+        android:enabled="true"
+        android:icon="@android:drawable/arrow_up_float"
+        android:title="@string/home_menu_item_search"/>
+    <item
+        android:id="@+id/categories"
+        android:enabled="true"
+        android:icon="@android:drawable/arrow_up_float"
+        android:title="@string/home_menu_item_categories"/>
+</menu>
