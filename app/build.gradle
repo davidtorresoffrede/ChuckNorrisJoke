@@ -35,15 +35,19 @@ android {
 }
 
 dependencies {
+    implementation project(":core")
     implementation project(":home")
+    implementation project(":random-joke")
     implementation kotlin.base
     implementation androidx.core
     implementation androidx.appcompat
     implementation androidx.constraintlayout
+    implementation androidx.fragment
     implementation android.material
     implementation koin.core
     implementation koin.android
     implementation koin.viewmodel
+    implementation koin.fragment
 
     testImplementation junit
     androidTestImplementation android_test.espresso_core

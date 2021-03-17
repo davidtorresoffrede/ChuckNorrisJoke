@@ -1,3 +1,5 @@
+include ':navigator'
+include ':random-joke'
 include ':home'
 include ':core'
 include ':base'

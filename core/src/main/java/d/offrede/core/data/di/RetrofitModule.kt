@@ -10,6 +10,8 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+const val BASE_URL = "https://api.chucknorris.io/"
+
 val retrofitModule = module {
 
     single<GsonConverterFactory> { GsonConverterFactory.create(get<Gson>()) }
@@ -20,9 +22,9 @@ val retrofitModule = module {
 
     single {
         get<OkHttpClient.Builder>()
-                .addInterceptor(get<Interceptor>(named("logger")))
-                .addInterceptor(get<Interceptor>(named("headers")))
-                .build()
+            .addInterceptor(get<Interceptor>(named("logger")))
+            .addInterceptor(get<Interceptor>(named("headers")))
+            .build()
     }
 
     single { OkHttpClient.Builder() }
@@ -38,8 +40,8 @@ val retrofitModule = module {
             var request = chain.request()
 
             val builder = request
-                    .newBuilder()
-                    .addHeader("Content-Type", "application/json;charser=UTF-8")
+                .newBuilder()
+                .addHeader("Content-Type", "application/json;charser=UTF-8")
 
             request = builder.build()
             chain.proceed(request)
@@ -48,9 +50,10 @@ val retrofitModule = module {
 
     single<Retrofit> {
         get<Retrofit.Builder>(named("retrofit-builder"))
-                .client(get())
-                .addConverterFactory(get<GsonConverterFactory>())
-                .build()
+            .client(get())
+            .addConverterFactory(get<GsonConverterFactory>())
+            .baseUrl(BASE_URL)
+            .build()
     }
 
     single(named("retrofit-builder")) {

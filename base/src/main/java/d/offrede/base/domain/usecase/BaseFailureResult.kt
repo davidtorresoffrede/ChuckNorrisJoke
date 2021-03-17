@@ -4,7 +4,7 @@ import androidx.annotation.StringRes
 import d.offrede.base.R.string.connection_failure_network as failureNetwork
 import d.offrede.base.R.string.connection_failure_unexpected as failureUnexpected
 
-sealed class BaseFailureResult(@StringRes val resMessage: Int) {
+sealed class BaseFailureResult(@StringRes val resMessage: Int): Exception() {
     object Unexpected : BaseFailureResult(failureUnexpected)
     object Network : BaseFailureResult(failureNetwork)
 }

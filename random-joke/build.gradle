@@ -41,9 +41,11 @@ android {
 
 dependencies {
     implementation project(":base")
+    implementation project(":core")
     implementation project(":navigator")
     implementation kotlin.base
     implementation kotlin.coroutines_core
+    implementation kotlin.coroutines_android
     implementation androidx.core
     implementation androidx.appcompat
     implementation androidx.constraintlayout
@@ -53,6 +55,13 @@ dependencies {
     implementation koin.android
     implementation koin.viewmodel
     implementation koin.fragment
+    implementation retrofit2.interceptor
+    implementation retrofit2.retrofit2
+    implementation retrofit2.gson
+    implementation retrofit2.coroutines
+    implementation lifecycle.common
+    implementation lifecycle.viewmodel
+    implementation lifecycle.extension
 
     testImplementation junit
     testImplementation mockk

@@ -1,0 +1,13 @@
+package d.offrede.random_joke.data.model
+
+import com.google.gson.annotations.SerializedName
+
+data class JokeData(
+    @SerializedName("categories") val categories: List<String>? = null,
+    @SerializedName("created_at") val createdAt: String? = null,
+    @SerializedName("icon_url") val iconUrl: String? = null,
+    @SerializedName("id") val id: String? = null,
+    @SerializedName("updated_at") val updatedAt: String? = null,
+    @SerializedName("url") val url: String? = null,
+    @SerializedName("value") val text: String? = null
+)
