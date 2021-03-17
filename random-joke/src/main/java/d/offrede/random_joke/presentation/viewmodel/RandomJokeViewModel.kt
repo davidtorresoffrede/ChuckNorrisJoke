@@ -56,4 +56,19 @@ class RandomJokeViewModel(
         this.resultLiveData.postValue(VisibilityStatus.GONE to Success(Joke()))
     }
 
+    override fun showEmpty(message: String) {
+        super.showEmpty(message)
+        hideSuccess()
+    }
+
+    override fun showFailure(message: String) {
+        super.showFailure(message)
+        hideSuccess()
+    }
+
+    override fun showLoading(message: String) {
+        super.showLoading(message)
+        hideSuccess()
+    }
+
 }
