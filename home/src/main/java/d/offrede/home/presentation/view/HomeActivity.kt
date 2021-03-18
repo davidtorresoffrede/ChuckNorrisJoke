@@ -23,6 +23,11 @@ class HomeActivity : BaseActivity() {
 
         setupKoinFragmentFactory()
 
+        bindViews()
+        showRandomJokeFragment()
+    }
+
+    private fun bindViews() {
         binding = ActivityHomeBinding.inflate(
             layoutInflater,
             baseBinding.activityContainer,
@@ -34,10 +39,6 @@ class HomeActivity : BaseActivity() {
             .setOnNavigationItemSelectedListener(
                 onNavigationItemSelectedListener
             )
-
-
-
-        showRandomJokeFragment()
     }
 
     private val onNavigationItemSelectedListener: (MenuItem) -> Boolean = { item ->
