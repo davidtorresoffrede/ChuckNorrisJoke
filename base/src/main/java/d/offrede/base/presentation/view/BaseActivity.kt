@@ -19,6 +19,7 @@ abstract class BaseActivity : AppCompatActivity() {
         baseBinding = ActivityContainerBinding.inflate(layoutInflater)
         super.setContentView(baseBinding.root)
         setSupportActionBar(baseBinding.toolbar)
+        baseBinding.appbar.gone()
         startObserves()
     }
 
