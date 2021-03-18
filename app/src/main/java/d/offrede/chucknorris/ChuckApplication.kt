@@ -1,6 +1,7 @@
 package d.offrede.chucknorris
 
 import android.app.Application
+import d.offrede.categories.categoriesModules
 import d.offrede.core.coreModules
 import d.offrede.home.di.homeModules
 import d.offrede.random_joke.randomJokeModules
@@ -27,4 +28,5 @@ class ChuckApplication : Application() {
         .plus(homeModules)
         .plus(randomJokeModules)
         .plus(searchModules)
+        .plus(categoriesModules)
 }

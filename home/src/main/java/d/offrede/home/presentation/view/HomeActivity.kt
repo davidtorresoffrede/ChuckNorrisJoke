@@ -35,6 +35,8 @@ class HomeActivity : BaseActivity() {
                 onNavigationItemSelectedListener
             )
 
+
+
         showRandomJokeFragment()
     }
 
@@ -73,7 +75,11 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun showCategoriesFragment() {
-
+        val categoriesClass : Class<Fragment> = get(named("CategoriesFragmentClass"))
+        supportFragmentManager
+            .beginTransaction()
+            .replace(binding.fragmentContainer.id, categoriesClass, null)
+            .commit()
     }
 
     companion object HomeStart: HomeNavigation {

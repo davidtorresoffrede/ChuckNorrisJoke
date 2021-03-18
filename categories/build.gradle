@@ -1,6 +1,8 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 apply from: rootProject.projectDir.absolutePath + "/dependencies.gradle"
@@ -10,14 +12,13 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "d.offrede.chucknorris"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,15 +34,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
+    implementation project(":base")
     implementation project(":core")
-    implementation project(":home")
-    implementation project(":random-joke")
-    implementation project(":search")
-    implementation project(":categories")
+    implementation project(":navigator")
     implementation kotlin.base
+    implementation kotlin.coroutines_core
+    implementation kotlin.coroutines_android
     implementation androidx.core
     implementation androidx.appcompat
     implementation androidx.constraintlayout
@@ -51,8 +55,11 @@ dependencies {
     implementation koin.android
     implementation koin.viewmodel
     implementation koin.fragment
-    implementation multidex
-
-    testImplementation junit
-    androidTestImplementation android_test.espresso_core
+    implementation retrofit2.interceptor
+    implementation retrofit2.retrofit2
+    implementation retrofit2.gson
+    implementation retrofit2.coroutines
+    implementation lifecycle.common
+    implementation lifecycle.viewmodel
+    implementation lifecycle.extension
 }
