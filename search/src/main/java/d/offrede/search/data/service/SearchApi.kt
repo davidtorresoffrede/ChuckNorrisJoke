@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface SearchApi {
-    @GET("jokes/search?query={query}")
+    @GET("jokes/search")
     suspend fun search(@Query("query") query: String): Response<SearchResultData>
 }

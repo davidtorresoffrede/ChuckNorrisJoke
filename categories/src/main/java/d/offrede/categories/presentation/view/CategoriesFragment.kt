@@ -2,6 +2,10 @@ package d.offrede.categories.presentation.view
 
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import d.offrede.base.presentation.extension.gone
+import d.offrede.base.presentation.extension.visible
+import d.offrede.base.presentation.view.BaseAdapter
 import d.offrede.base.presentation.view.BaseFragment
 import d.offrede.categories.R
 import d.offrede.categories.databinding.FragmentCategoriesBinding
@@ -27,18 +31,50 @@ class CategoriesFragment : BaseFragment() {
             true
         )
 
-        showCategories()
+        observeCategories()
+        if (savedInstanceState == null) getCategories()
     }
 
-    private fun showCategories() {
+    private fun observeCategories() {
         viewModel
             .resultLiveData()
             .observe(
                 this,
-                {},
-                {},
-                {}
+                {
+                    showCategories(it.data)
+                },
+                {
+                    hideList()
+                },
+                {
+                    hideList()
+                }
             )
     }
 
+    private fun getCategories() = viewModel.getCategories()
+
+    private fun showCategories(list: List<String>) {
+        showList()
+        bindList(list)
+    }
+
+    private fun bindList(list: List<String>) {
+        binding.recycler.apply {
+            visibility = View.VISIBLE
+            layoutManager = LinearLayoutManager(context)
+            setHasFixedSize(true)
+            adapter = BaseAdapter(list) {
+                CategoriesViewHolder(it)
+            }
+        }
+    }
+
+    private fun showList() {
+        binding.recycler.visible()
+    }
+
+    private fun hideList() {
+        binding.recycler.gone()
+    }
 }

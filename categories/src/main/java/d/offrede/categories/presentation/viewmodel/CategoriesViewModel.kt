@@ -18,7 +18,7 @@ class CategoriesViewModel(
 
     fun resultLiveData() = resultLiveData
 
-    fun getCategories(query: String) {
+    fun getCategories() {
         jobs add launch {
             showLoading()
             withContext(Dispatchers.IO) {

@@ -1,5 +1,6 @@
 package d.offrede.search.domain.usecase
 
+import android.util.Log
 import d.offrede.base.domain.usecase.BaseUseCase
 import d.offrede.search.domain.model.SearchResultDomain
 import d.offrede.search.domain.repository.SearchRepository
