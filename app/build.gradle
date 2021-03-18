@@ -15,6 +15,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,6 +39,7 @@ dependencies {
     implementation project(":core")
     implementation project(":home")
     implementation project(":random-joke")
+    implementation project(":search")
     implementation kotlin.base
     implementation androidx.core
     implementation androidx.appcompat
@@ -48,6 +50,7 @@ dependencies {
     implementation koin.android
     implementation koin.viewmodel
     implementation koin.fragment
+    implementation multidex
 
     testImplementation junit
     androidTestImplementation android_test.espresso_core

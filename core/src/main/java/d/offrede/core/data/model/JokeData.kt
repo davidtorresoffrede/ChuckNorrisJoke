@@ -1,4 +1,4 @@
-package d.offrede.random_joke.data.model
+package d.offrede.core.data.model
 
 import com.google.gson.annotations.SerializedName
 

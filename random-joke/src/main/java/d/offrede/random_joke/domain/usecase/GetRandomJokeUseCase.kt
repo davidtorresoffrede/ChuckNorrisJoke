@@ -1,8 +1,7 @@
 package d.offrede.random_joke.domain.usecase
 
-import d.offrede.base.domain.usecase.BaseFailureResult
 import d.offrede.base.domain.usecase.BaseUseCase
-import d.offrede.random_joke.domain.model.JokeDomain
+import d.offrede.core.domain.model.JokeDomain
 import d.offrede.random_joke.domain.repository.GetRandomJokeRepository
 
 class GetRandomJokeUseCase(
@@ -11,6 +10,6 @@ class GetRandomJokeUseCase(
     override suspend fun process(
         params: Nothing?,
         onSuccess: (JokeDomain) -> Unit,
-        onFailure: (BaseFailureResult) -> Unit
+        onFailure: (Exception) -> Unit
     ) = onSuccess(repository.getRandomJoke())
 }

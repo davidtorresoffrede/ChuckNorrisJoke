@@ -1,4 +1,4 @@
-package d.offrede.random_joke.domain.model
+package d.offrede.core.domain.model
 
 data class JokeDomain(
     val categories: List<String>? = null,

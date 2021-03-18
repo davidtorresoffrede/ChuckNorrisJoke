@@ -1,8 +1,8 @@
-package d.offrede.random_joke.data.mapper
+package d.offrede.core.data.mapper
 
 import d.offrede.base.domain.mapper.BaseMapper
-import d.offrede.random_joke.data.model.JokeData
-import d.offrede.random_joke.domain.model.JokeDomain
+import d.offrede.core.data.model.JokeData
+import d.offrede.core.domain.model.JokeDomain
 
 object JokeDataToDomain : BaseMapper<JokeData, JokeDomain>() {
     override fun transform(source: JokeData) = JokeDomain(

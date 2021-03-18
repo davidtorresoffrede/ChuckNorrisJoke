@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation project(":base")
     implementation kotlin.base
     implementation kotlin.coroutines_core
     implementation androidx.core

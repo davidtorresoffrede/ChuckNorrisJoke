@@ -58,4 +58,6 @@ ext {
     mockk           = "io.mockk:mockk:1.10.6"
 
     glide           = "com.github.bumptech.glide:glide:4.10.0"
+
+    multidex           = "androidx.multidex:multidex:2.0.1"
 }

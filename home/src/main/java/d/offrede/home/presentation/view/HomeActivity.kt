@@ -35,33 +35,45 @@ class HomeActivity : BaseActivity() {
                 onNavigationItemSelectedListener
             )
 
-        showRandomJokeClass()
+        showRandomJokeFragment()
     }
 
     private val onNavigationItemSelectedListener: (MenuItem) -> Boolean = { item ->
         when (item.itemId) {
             R.id.random -> {
-                showRandomJokeClass()
+                showRandomJokeFragment()
                 true
             }
             R.id.search -> {
-                // Respond to navigation item 2 click
+                showSearchFragment()
                 true
             }
             R.id.categories -> {
-                // Respond to navigation item 3 click
+                showCategoriesFragment()
                 true
             }
             else -> false
         }
     }
 
-    private fun showRandomJokeClass() {
+    private fun showRandomJokeFragment() {
         val randomJokeClass : Class<Fragment> = get(named("RandomJokeFragmentClass"))
         supportFragmentManager
             .beginTransaction()
             .replace(binding.fragmentContainer.id, randomJokeClass, null)
             .commit()
+    }
+
+    private fun showSearchFragment() {
+        val searchClass : Class<Fragment> = get(named("SearchFragmentClass"))
+        supportFragmentManager
+            .beginTransaction()
+            .replace(binding.fragmentContainer.id, searchClass, null)
+            .commit()
+    }
+
+    private fun showCategoriesFragment() {
+
     }
 
     companion object HomeStart: HomeNavigation {

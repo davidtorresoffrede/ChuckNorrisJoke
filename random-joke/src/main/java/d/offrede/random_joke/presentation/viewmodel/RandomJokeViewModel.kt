@@ -1,15 +1,14 @@
 package d.offrede.random_joke.presentation.viewmodel
 
 import android.util.Log
-import d.offrede.base.domain.usecase.BaseFailureResult
 import d.offrede.base.domain.usecase.BaseUseCase
 import d.offrede.base.presentation.model.ViewModelResult.Success
 import d.offrede.base.presentation.model.VisibilityStatus
 import d.offrede.base.presentation.viewmodel.BaseLiveData
 import d.offrede.base.presentation.viewmodel.BaseViewModel
-import d.offrede.random_joke.domain.model.JokeDomain
-import d.offrede.random_joke.presentation.mapper.JokeDomainToView
-import d.offrede.random_joke.presentation.model.Joke
+import d.offrede.core.domain.model.JokeDomain
+import d.offrede.core.presentation.mapper.JokeDomainToView
+import d.offrede.core.presentation.model.Joke
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -43,8 +42,8 @@ class RandomJokeViewModel(
         hideFailure()
     }
 
-    private fun makeFailure(failureResult: BaseFailureResult) {
-        Log.e("failureResult", failureResult.message?:"", failureResult)
+    private fun makeFailure(failureResult: Exception) {
+        Log.e("failureResult", failureResult.message ?: "", failureResult)
         showFailure()
     }
 

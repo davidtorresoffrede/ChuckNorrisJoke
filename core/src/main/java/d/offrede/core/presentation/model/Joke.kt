@@ -1,4 +1,4 @@
-package d.offrede.random_joke.presentation.model
+package d.offrede.core.presentation.model
 
 data class Joke(
     val categories: List<String> = listOf(),

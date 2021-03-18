@@ -1,12 +1,11 @@
 package d.offrede.base.domain.usecase
 
-import d.offrede.base.domain.usecase.BaseFailureResult.Network
 
 abstract class BaseUseCase<Type, in Params> where Type : Any {
     suspend fun run(
         params: Params? = null,
         onSuccess: (Type) -> Unit = {},
-        onFailure: (BaseFailureResult) -> Unit = {}
+        onFailure: (Exception) -> Unit = {}
     ) {
         try {
             process(params, onSuccess, onFailure)
@@ -18,6 +17,6 @@ abstract class BaseUseCase<Type, in Params> where Type : Any {
     abstract suspend fun process(
         params: Params?,
         onSuccess: (Type) -> Unit = {},
-        onFailure: (BaseFailureResult) -> Unit = {}
+        onFailure: (Exception) -> Unit = {}
     )
 }
