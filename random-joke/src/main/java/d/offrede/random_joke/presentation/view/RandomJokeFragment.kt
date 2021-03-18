@@ -1,10 +1,12 @@
 package d.offrede.random_joke.presentation.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import d.offrede.base.presentation.extension.gone
+import d.offrede.base.presentation.extension.visible
 import d.offrede.base.presentation.view.BaseFragment
+import d.offrede.core.extension.loadFromUrl
+import d.offrede.core.presentation.model.Joke
 import d.offrede.random_joke.R
 import d.offrede.random_joke.databinding.FragmentRandomJokeBinding
 import d.offrede.random_joke.presentation.viewmodel.RandomJokeViewModel
@@ -39,15 +41,30 @@ class RandomJokeFragment : BaseFragment() {
             .observe(
                 this,
                 {
-                    binding.joke.text = it.data.text
+                    showCard(it.data)
                 },
-                {},
-                {}
+                {
+                    hideCard()
+                },
+                {
+                    hideCard()
+                }
             )
     }
 
-    private fun getJoke() {
-        viewModel.getJoke()
+    private fun getJoke() = viewModel.getJoke()
+
+    private fun bindJoke(joke: Joke) {
+        binding.text.text = joke.text
+        binding.image.loadFromUrl(joke.iconUrl)
     }
+
+    private fun showCard(joke: Joke) {
+        binding.card.visible()
+        bindJoke(joke)
+    }
+
+    private fun hideCard() = binding.card.gone()
+
 
 }

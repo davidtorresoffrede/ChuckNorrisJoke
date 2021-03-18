@@ -48,6 +48,7 @@ dependencies {
     implementation androidx.appcompat
     implementation androidx.constraintlayout
     implementation androidx.fragment
+    implementation androidx.cardview
     implementation android.material
     implementation koin.core
     implementation koin.android
